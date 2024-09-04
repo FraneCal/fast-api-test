@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
+from fastapi.responses import PlainTextResponse
 
 app = FastAPI()
 
@@ -25,4 +26,4 @@ async def root(request: ListRequest):
 
     result = sum(request.numbers)
 
-    return {"result": result}
+    return f"Sum of numbers: {result}"` or `from fastapi.responses import PlainTextResponse
