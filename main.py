@@ -8,8 +8,8 @@ app = FastAPI()
 class ListRequest(BaseModel):
      numbers: List[int]
 
-@app.post("/", response_class=PlainTextResponse)
-async def root(request: ListRequest):
+@app.post("/process_numbers", response_class=PlainTextResponse)
+async def process_numbers(request: ListRequest):
      int32_min = -2**31
      int32_max = 2**31 - 1
 
