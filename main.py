@@ -17,6 +17,6 @@ async def process_numbers(request: ListRequest):
           if not (int32_min <= number <= int32_max):
                raise HTTPException(status_code=400,detail="All elements must be int32 numbers")
      
-     result = sum(request.numbers)
+     result = sum(request.detail.input)
      
      return f"Sum of numbers: {result}"
